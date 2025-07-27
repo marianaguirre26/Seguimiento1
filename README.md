@@ -1,7 +1,7 @@
 
 # SEGUIMIENTO 1 – BIOINFORMÁTICA 🧬
-# Organismo: Astatotilapia calliptera 🐟
-# Por: Mariana Aguirre Llano
+## Organismo: Astatotilapia calliptera 🐟
+### Mariana Aguirre Llano
 
 # 1. 📑 DESCRIPCIÓN DEL FORMATO GFF3 (GENERIC FEATURE FORMAT VERSION 3)
 ## 
