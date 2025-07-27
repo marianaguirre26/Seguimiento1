@@ -45,8 +45,11 @@ gunzip Astatotilapia_calliptera.fAstCal1.3.114.gff3.gz
 
 #### i. ¿Cuántos features contiene el archivo?
 ``` bash
-
+# Contar líneas que no sean comentarios (líneas con anotaciones)
+grep -v "^#" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l
 ```
+##### Esto nos arroja un resultado de 2307837 features
+
 #### ii. ¿Cuantas regiones de la secuencia (cromosomas) contiene el archivo?
 ``` bash
 
