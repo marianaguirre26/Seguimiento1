@@ -11,12 +11,12 @@
 
  | Nº | Campo          | Descripción                                                                       |
 | -- | -------------- | --------------------------------------------------------------------------------- |
-| 1  | **seqid**      | Identificador de la secuencia (por ejemplo, el cromosoma o contig).               |
-| 2  | **source**     | Fuente de la anotación (herramienta, base de datos o pipeline que la generó).     |
+| 1  | **seqid**      | El nombre de la secuencia, como un cromosoma o un andamiaje.                      |
+| 2  | **source**     | Fuente de la anotación (nombre de la base de datos o del proyecto).               |
 | 3  | **type**       | Tipo de característica anotada (gene, exon, CDS, mRNA, region, etc.).             |
 | 4  | **start**      | Posición inicial de la característica en la secuencia (base 1).                   |
 | 5  | **end**        | Posición final de la característica.                                              |
-| 6  | **score**      | Puntuación (por ejemplo, confianza en la predicción); puede ser "." si no aplica. |
+| 6  | **score**      | Puntuación, valor de punto flotante (por ejemplo, confianza en la predicción)     |
 | 7  | **strand**     | Hebra de ADN: "+" (sentido) o "−" (antisentido).                                  |
 | 8  | **phase**      | Solo para CDS: 0, 1 o 2; indica dónde comienza el primer codón completo.          |
 | 9  | **attributes** | Información adicional en formato clave=valor, separada por punto y coma (;).      |
@@ -39,17 +39,17 @@ gunzip Astatotilapia_calliptera.fAstCal1.3.114.gff3.gz
 
 ### a. Descripción del organismo
 
-### 
+##### *Astatotilapia calliptera* es un pez de agua dulce que pertenece a la familia de los cíclidos. Habita principalmente en lagos y ríos del sudeste africano, como el lago Malawi. Es una especie muy estudiada porque presenta gran diversidad genética, lo que la hace útil para investigaciones en evolución, genética del desarrollo y adaptación (Naturalista., sf).
 
 ### b. Preguntas
 
 #### i. ¿Cuántos features contiene el archivo?
+##### Un "feature" es una línea de datos, así que contaremos las líneas que no son comentarios.
 ##### El siguiente código nos arroja un resultado de **2307837 features**
 ``` bash
-# Contar líneas que no sean comentarios (líneas con anotaciones)
-grep -v "^#" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l
+# Contar líneas que no sean comentarios (líneas que inicien con #)
+grep -v "^#" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l  
 ```
-
 
 #### ii. ¿Cuantas regiones de la secuencia (cromosomas) contiene el archivo?
 ``` bash
