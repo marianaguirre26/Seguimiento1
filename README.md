@@ -1,8 +1,7 @@
-# -----------------------------------------------------
+
 # SEGUIMIENTO 1 – BIOINFORMÁTICA 
 # Organismo: Astatotilapia calliptera
 # Por: Mariana Aguirre Llano
-# -----------------------------------------------------
 
 # 1. DESCRIPCIÓN DEL FORMATO GFF3 (GENERIC FEATURE FORMAT VERSION 3)
 ## 
@@ -10,8 +9,8 @@
 # 2. DESCARGA DEL ARCHIVO 
 
 # Creamos una carpeta nueva donde guardaremos todos los documentos necesarios para este ejercicio y accedemos a ella
-mkdir -p seguimiento1
-cd seguimiento1
+`mkdir -p seguimiento1`
+`cd seguimiento1`
 
 # Descargamos la información correspondiente a Astatotilapia Calliptera usando el comando wget que nos permite descargar archivos de Internet
 wget http://ftp.ensembl.org/pub/current_gff3/astatotilapia_calliptera/Astatotilapia_calliptera.fAstCal1.3.114.gff3.gz
