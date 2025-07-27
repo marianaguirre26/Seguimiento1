@@ -1,6 +1,6 @@
 
 # SEGUIMIENTO 1 – BIOINFORMÁTICA 🧬
-## Organismo: Astatotilapia calliptera 🐟
+## Organismo: *Astatotilapia calliptera* 🐟
 ### Mariana Aguirre Llano
 
 
