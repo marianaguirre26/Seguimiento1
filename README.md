@@ -14,7 +14,7 @@
 mkdir -p seguimiento1
 cd seguimiento1
 
-# Descargamos la información correspondiente a Astatotilapia Calliptera usando el comando wget que nos permite descargar archivos de Internet
+# Descargamos la información usando el comando wget que nos permite descargar archivos de Internet
 wget http://ftp.ensembl.org/pub/current_gff3/astatotilapia_calliptera/Astatotilapia_calliptera.fAstCal1.3.114.gff3.gz
 
 # Descomprimimos el archivo 
