@@ -72,7 +72,7 @@ grep -P "\tgene\t" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l
 | mRNA                | 76,105       |
 | five_prime_UTR      | 71,961       |
 | three_prime_UTR     | 58,786       |
-| ### (posible error) | 33,589       |
+| ###                 | 33,589       |
 | gene                | 25,714       |
 | lnc_RNA             | 9,679        |
 | ncRNA_gene          | 7,440        |
