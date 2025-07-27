@@ -3,10 +3,12 @@
 ## Organismo: Astatotilapia calliptera 🐟
 ### Mariana Aguirre Llano
 
-# 1. 📑 DESCRIPCIÓN DEL FORMATO GFF3 (GENERIC FEATURE FORMAT VERSION 3)
-## 
 
-# 2. 📁 DESCARGA DEL ARCHIVO 
+
+## 1. 📑 DESCRIPCIÓN DEL FORMATO GFF3 (GENERIC FEATURE FORMAT VERSION 3)
+### 
+
+## 2. 📁 DESCARGA DEL ARCHIVO 
 ```bash
 # Creamos una carpeta nueva donde guardaremos todos los documentos necesarios para este ejercicio y accedemos a ella
 mkdir -p seguimiento1
@@ -19,26 +21,28 @@ wget http://ftp.ensembl.org/pub/current_gff3/astatotilapia_calliptera/Astatotila
 gunzip Astatotilapia_calliptera.fAstCal1.3.114.gff3.gz
 ```
 
-# 3. 🎯 ANÁLISIS DEL ARCHIVO
+## 3. 🎯 ANÁLISIS DEL ARCHIVO
 
-## a. Descripción del organismo
+### a. Descripción del organismo
 
-## b. Preguntas
+### 
 
-### i. ¿Cuántos features contiene el archivo?
+### b. Preguntas
+
+#### i. ¿Cuántos features contiene el archivo?
 ``` bash
 
 ```
-### ii. ¿Cuantas regiones de la secuencia (cromosomas) contiene el archivo?
+#### ii. ¿Cuantas regiones de la secuencia (cromosomas) contiene el archivo?
 ``` bash
 
 ```
-### iii. ¿Cuántos genes están listados en el organismo?
+#### iii. ¿Cuántos genes están listados en el organismo?
 ``` bash
 
 ```
 
-### iv. ¿Cuál es el top 10 de tipo de features (columna 3) más anotados en el genoma?
+#### iv. ¿Cuál es el top 10 de tipo de features (columna 3) más anotados en el genoma?
 ``` bash
 
 ```
