@@ -51,18 +51,35 @@ gunzip Astatotilapia_calliptera.fAstCal1.3.114.gff3.gz
 grep -v "^#" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l  
 ```
 
-#### ii. ¿Cuantas regiones de la secuencia (cromosomas) contiene el archivo?
+#### ii. ¿Cuántas regiones de la secuencia (cromosomas) contiene el archivo?
+##### El siguiente código nos arroja un resultado de **248**
 ``` bash
-
+# Contar cuántas regiones genómicas están anotadas (columna 3 = region)
+grep -P "\tregion\t" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l
 ```
 #### iii. ¿Cuántos genes están listados en el organismo?
+##### El siguiente código nos arroja un resultado de **25714**
 ``` bash
-
+# Contar cuántos genes están anotados (columna 3 = gene)
+grep -P "\tgene\t" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l
 ```
-
 #### iv. ¿Cuál es el top 10 de tipo de features (columna 3) más anotados en el genoma?
+##### El siguiente código nos arroja lo siguiente:
+| Feature             | Frecuencia   |
+|---------------------|--------------|
+| exon                | 1,054,286    |
+| CDS                 | 1,002,359    |
+| mRNA                | 76,105       |
+| five_prime_UTR      | 71,961       |
+| three_prime_UTR     | 58,786       |
+| ### (posible error) | 33,589       |
+| gene                | 25,714       |
+| lnc_RNA             | 9,679        |
+| ncRNA_gene          | 7,440        |
+| miRNA               | 418          |
 ``` bash
-
+# Top 10 de tipos de features más anotados en la columna 3
+cut -f3 Astatotilapia_calliptera.fAstCal1.3.114.gff3 | sort | uniq -c | sort -nr | head -10
 ```
 
 
