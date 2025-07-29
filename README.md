@@ -7,7 +7,7 @@
 
 ## 1. 📑 DESCRIPCIÓN DEL FORMATO GFF3 (GENERIC FEATURE FORMAT VERSION 3)
 
-#### El formato GFF3 (General Feature Format versión 3) es un estándar usado para describir anotaciones genómicas. Cada línea representa una característica biológica (feature) en el genoma, como genes, exones, ARN, regiones regulatorias, etc. Las columnas están separadas por tabulaciones (\t), y cada línea sigue el mismo orden estructurado.
+El formato GFF3 (General Feature Format versión 3) es un estándar usado para describir anotaciones genómicas. Cada línea representa una característica biológica (feature) en el genoma, como genes, exones, ARN, regiones regulatorias, etc. Las columnas están separadas por tabulaciones (\t), y cada línea sigue el mismo orden estructurado.
 
  | Nº | Campo          | Descripción                                                                       |
 | -- | -------------- | --------------------------------------------------------------------------------- |
