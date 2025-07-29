@@ -39,32 +39,36 @@ gunzip Astatotilapia_calliptera.fAstCal1.3.114.gff3.gz
 
 ### a. Descripción del organismo
 
-##### *Astatotilapia calliptera* es un pez de agua dulce que pertenece a la familia de los cíclidos. Habita principalmente en lagos y ríos del sudeste africano, como el lago Malawi. Es una especie muy estudiada porque presenta gran diversidad genética, lo que la hace útil para investigaciones en evolución, genética del desarrollo y adaptación (Naturalista., sf).
+*Astatotilapia calliptera* es un pez de agua dulce que pertenece a la familia de los cíclidos. Habita principalmente en lagos y ríos del sudeste africano, como el lago Malawi. Es una especie muy estudiada porque presenta gran diversidad genética, lo que la hace útil para investigaciones en evolución, genética del desarrollo y adaptación (Naturalista., sf).
 
 ### b. Preguntas
 
 #### i. ¿Cuántos features contiene el archivo?
-##### Un "feature" es una línea de datos, así que contaremos las líneas que no son comentarios.
-##### El siguiente código nos arroja un resultado de **2307837 features**
+Un "feature" es una línea de datos, así que contaremos las líneas que no son comentarios.
+El siguiente código nos arroja un resultado de **2307837 features**
 ``` bash
 # Contar líneas que no sean comentarios (líneas que inicien con #)
 grep -v "^#" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l  
 ```
 
 #### ii. ¿Cuántas regiones de la secuencia (cromosomas) contiene el archivo?
-##### El siguiente código nos arroja un resultado de **248**
+El siguiente código nos arroja un resultado de **248**
 ``` bash
 # Contar cuántas regiones genómicas están anotadas (columna 3 = region)
 grep -P "\tregion\t" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l
 ```
 #### iii. ¿Cuántos genes están listados en el organismo?
-##### El siguiente código nos arroja un resultado de **25714**
+El siguiente código nos arroja un resultado de **25714**
 ``` bash
 # Contar cuántos genes están anotados (columna 3 = gene)
 grep -P "\tgene\t" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l
 ```
 #### iv. ¿Cuál es el top 10 de tipo de features (columna 3) más anotados en el genoma?
-##### El siguiente código nos arroja lo siguiente:
+El siguiente código nos arroja lo siguiente:
+``` bash
+# Top 10 de tipos de features más anotados en la columna 3
+cut -f3 Astatotilapia_calliptera.fAstCal1.3.114.gff3 | sort | uniq -c | sort -nr | head -10
+```
 | Feature             | Frecuencia   |
 |---------------------|--------------|
 | exon                | 1,054,286    |
@@ -77,9 +81,5 @@ grep -P "\tgene\t" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l
 | lnc_RNA             | 9,679        |
 | ncRNA_gene          | 7,440        |
 | miRNA               | 418          |
-``` bash
-# Top 10 de tipos de features más anotados en la columna 3
-cut -f3 Astatotilapia_calliptera.fAstCal1.3.114.gff3 | sort | uniq -c | sort -nr | head -10
-```
 
 
