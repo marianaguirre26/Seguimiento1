@@ -1,0 +1,28 @@
+# Creamos una carpeta nueva donde guardaremos todos los documentos necesarios para este ejercicio y accedemos a ella
+mkdir -p seguimiento1
+cd seguimiento1
+
+# Descargamos la información usando el comando wget que nos permite descargar archivos de Internet
+wget http://ftp.ensembl.org/pub/current_gff3/astatotilapia_calliptera/Astatotilapia_calliptera.fAstCal1.3.114.gff3.gz
+
+# Descomprimimos el archivo 
+gunzip Astatotilapia_calliptera.fAstCal1.3.114.gff3.gz
+
+# -----------------------------------------------
+# Preguntas
+
+# 1.
+# Contar líneas que no sean comentarios (líneas que inicien con #)
+grep -v "^#" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l  
+
+# 2.
+# Contar cuántas regiones genómicas están anotadas (columna 3 = region)
+grep -P "\tregion\t" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l
+
+#3. # Contar cuántos genes están anotados (columna 3 = gene)
+grep -P "\tgene\t" Astatotilapia_calliptera.fAstCal1.3.114.gff3 | wc -l
+
+#4. # Top 10 de tipos de features más anotados en la columna 3
+cut -f3 Astatotilapia_calliptera.fAstCal1.3.114.gff3 | sort | uniq -c | sort -nr | head -10
+
+
